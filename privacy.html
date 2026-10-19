@@ -62,7 +62,7 @@
     <div class="policy-block reveal" id="intro">
       <h2><span class="pn">1</span> Overview</h2>
       <p>Easter Bunny Runner (the "Game", package <strong style="overflow-wrap:anywhere">utiledge.easter.bunny.easterbasket.easteregg.bunnycallsimulator</strong>) is a single-player arcade game. We designed it to be privacy-friendly: <strong>your game progress stays on your own device</strong>, and we do not run accounts, logins, or leaderboards that upload your data.</p>
-      <p>This policy explains the limited data the Game uses, the Android permissions it requests, and the one third-party service it relies on (Google Firebase for optional push notifications).</p>
+      <p>This policy explains the limited data the Game uses, the Android permissions it requests, and the third-party services it relies on: Google AdMob (ads) and Google Firebase (analytics, crash reports and push notifications).</p>
     </div>
 
     <div class="policy-block reveal" id="collect">
@@ -76,6 +76,12 @@
       </ul>
       <div class="note-box">All of the above is stored privately within the app's own sandbox on your device. Uninstalling the Game removes it.</div>
 
+      <p><strong>Advertising ID (Google AdMob).</strong> The Game shows ads served by Google AdMob. To serve and measure ads and to prevent fraud, the AdMob SDK collects your device's <strong>Android Advertising ID</strong> together with basic device and app information (such as device model, OS version, IP address and ad interactions). Ads may be personalised depending on your settings. You can reset your Advertising ID or opt out of personalised ads at any time in your device settings (<em>Settings &rarr; Google &rarr; Ads</em>, or <em>Settings &rarr; Privacy &rarr; Ads</em> on newer Android versions).</p>
+
+      <p><strong>Usage analytics (Firebase Analytics).</strong> The Game uses Google Firebase Analytics to understand how it is used, for example which screens are opened and how runs go (score, coins collected). This data is collected with the Firebase app-instance ID and, where available, the Advertising ID. It is not linked to your name or any account.</p>
+
+      <p><strong>Crash reports (Firebase Crashlytics).</strong> If the Game crashes, Firebase Crashlytics sends a crash report (stack trace, device model, OS version and app version) so we can fix the problem.</p>
+
       <p><strong>Push-notification token (Firebase Cloud Messaging).</strong> If notifications are enabled, Google's Firebase Cloud Messaging assigns your installation a device token so notifications can be delivered. This token is generated and handled by Google's Firebase service. The Game does not collect a profile, contact list, or personal identity from this.</p>
     </div>
 
@@ -84,43 +90,50 @@
       <p>We want to be clear about what the Game does <strong>not</strong> do:</p>
       <ul>
         <li>No personal information — no name, email, phone number, or address</li>
-        <li>No device identifiers such as IMEI, serial number, or advertising ID</li>
+        <li>No hardware identifiers such as IMEI or serial number</li>
         <li>No location data</li>
         <li>No contacts, call logs, photos, or files</li>
         <li>No account or login — you play completely anonymously</li>
         <li>No leaderboard or score upload — scores stay on your device</li>
-        <li>No selling or sharing of personal data with advertisers</li>
+        <li>No selling of personal data &mdash; the only data used for ads is what Google AdMob collects, described above</li>
       </ul>
-      <div class="note-box good">The Game includes analytics and crash-reporting libraries from Google Firebase as part of its toolkit, but they are <strong>not actively used to send your usage or crash data</strong> in this version.</div>
+      <div class="note-box good">Your game progress is never uploaded; it stays on your device.</div>
     </div>
 
     <div class="policy-block reveal" id="permissions">
       <h2><span class="pn">4</span> Permissions &amp; why we ask</h2>
       <p>Android requires apps to declare permissions. Here is every permission the Game uses and exactly why:</p>
       <table class="perm-table">
-        <tr><td>Internet</td><td>Allows Firebase Cloud Messaging to receive push notifications. The Game has no other backend it sends data to.</td></tr>
+        <tr><td>Internet</td><td>Needed to load ads (Google AdMob), send analytics and crash reports (Firebase), and receive push notifications. The Game has no backend of its own.</td></tr>
         <tr><td>Notifications</td><td>Lets the Game show you notifications (for example, reminders or news). You can turn these off in your system settings at any time.</td></tr>
         <tr><td>Camera</td><td>Used <strong>only</strong> for the optional, playful in-app "bunny video call" self-view. The camera preview is shown live on your screen and is <strong>never recorded, stored, or transmitted</strong>. If you deny the permission, the feature simply shows a placeholder avatar instead.</td></tr>
         <tr><td>Vibrate</td><td>Provides haptic feedback (little buzzes) on hits, pickups, and menu taps. Optional — toggle it off in settings.</td></tr>
-        <tr><td>Full-screen intent</td><td>Allows an important notification to display as a full-screen alert on supported devices.</td></tr>
-        <tr><td>Display over other apps</td><td>Supports showing certain alerts/overlays related to notifications.</td></tr>
+        <tr><td>Advertising ID</td><td>Lets Google AdMob read the Android Advertising ID to serve and measure ads (see "Information we collect").</td></tr>
       </table>
       <div class="note-box">The camera is released as soon as you leave the call screen. No video frames are saved to disk or uploaded anywhere.</div>
     </div>
 
     <div class="policy-block reveal" id="thirdparty">
       <h2><span class="pn">5</span> Third-party services</h2>
-      <p>The Game uses <strong>Google Firebase Cloud Messaging</strong> to deliver push notifications. When notifications are active, Google processes a device messaging token on our behalf. Google's handling of this data is governed by Google's own privacy policy.</p>
+      <p>The Game uses the following Google services, which process the data described above. Google's handling of this data is governed by Google's own privacy policy.</p>
+      <ul>
+        <li><strong>Google AdMob</strong> &mdash; shows ads; collects the Advertising ID and device information.</li>
+        <li><strong>Google Firebase Analytics</strong> &mdash; usage statistics.</li>
+        <li><strong>Google Firebase Crashlytics</strong> &mdash; crash reports.</li>
+        <li><strong>Google Firebase Cloud Messaging</strong> &mdash; push notifications.</li>
+      </ul>
       <div class="pill-row">
-        <span class="pill-tag">Google Firebase Cloud Messaging</span>
-        <span class="pill-tag">Push notifications only</span>
+        <span class="pill-tag">Google AdMob</span>
+        <span class="pill-tag">Firebase Analytics</span>
+        <span class="pill-tag">Firebase Crashlytics</span>
+        <span class="pill-tag">Firebase Cloud Messaging</span>
       </div>
-      <p style="margin-top:12px">You can review Google's privacy practices here: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--mint-deep);font-weight:600">policies.google.com/privacy</a>.</p>
+      <p style="margin-top:12px">You can review Google's privacy practices here: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--mint-deep);font-weight:600">policies.google.com/privacy</a>, and how Google uses data from apps that use its services: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener" style="color:var(--mint-deep);font-weight:600;overflow-wrap:anywhere">policies.google.com/technologies/partner-sites</a>.</p>
     </div>
 
     <div class="policy-block reveal" id="children">
       <h2><span class="pn">6</span> Children's privacy</h2>
-      <p>Easter Bunny Runner is a family-friendly arcade game suitable for all ages. Because it does not collect personal information, create accounts, or require any sign-in, it does not knowingly gather personal data from children. If you believe a child has somehow provided personal information through the Game, please contact us and we will help.</p>
+      <p>Easter Bunny Runner is a family-friendly arcade game suitable for all ages. It does not create accounts or require any sign-in, and it does not knowingly collect personal information from children beyond the advertising and analytics data described above. If you believe a child has somehow provided personal information through the Game, please contact us and we will help.</p>
     </div>
 
     <div class="policy-block reveal" id="retention">
@@ -130,6 +143,8 @@
         <li>Clearing the app's data from your system settings resets your progress.</li>
         <li>Uninstalling the Game permanently removes all locally stored data.</li>
         <li>Turning off notifications in your system settings stops the push token from being used.</li>
+        <li>You can reset or delete your Advertising ID, or opt out of ad personalisation, in your device settings.</li>
+        <li>Analytics and crash data are kept by Google Firebase under its standard retention settings. To ask for it to be deleted, contact us below.</li>
       </ul>
     </div>
 
