@@ -44,7 +44,7 @@ Search all three HTML files for:
 ```
 
 and replace each with your real Play Store listing URL
-(e.g. `https://play.google.com/store/apps/details?id=com.example.drop.zone`).
+(e.g. `https://play.google.com/store/apps/details?id=utiledge.easter.bunny.easterbasket.easteregg.bunnycallsimulator`).
 
 ### 2. Real screenshots (optional)
 The Home page **Screenshots** section uses composed mockups built from the real game art,
